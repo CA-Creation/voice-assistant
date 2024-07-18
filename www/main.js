@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     });
 
-    // Siri configuration
+// Siri configuration
     var siriWave = new SiriWave({
         container: document.getElementById("siri-container"),
         width: 800,
