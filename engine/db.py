@@ -6,13 +6,20 @@ cursor = con.cursor()
 query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
 cursor.execute(query)
 
-#query = "INSERT INTO sys_command VALUES (null,'one note', 'C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTE.exe')"
+query = "INSERT INTO sys_command VALUES (null,'Steam', 'C:\\Users\\chamo\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Steam')"
+cursor.execute(query)
+con.commit()
+
+#query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
+#cursor.execute(query)
+
+#query = "INSERT INTO web_command VALUES (null,'canva', 'https://www.canva.com/')"
 #cursor.execute(query)
 #con.commit()
 
-query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
-cursor.execute(query)
+#testing module
 
-query = "INSERT INTO web_command VALUES (null,'canva', 'https://www.canva.com/')"
-cursor.execute(query)
-con.commit()
+#app_name = "Steam"
+#cursor.execute('SELECT path FROM sys_command WHERE name IN (?)', (app_name,))
+#results = cursor.fetchall()
+#print(results[0][0])
